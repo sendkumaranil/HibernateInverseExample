@@ -33,7 +33,7 @@ the relationship.
 			<one-to-many class="com.hibernate.inverseexample.model.StockDailyRecord" />
 		</set>
 
-To understand this concept we will have to look over console logger where which query executed.
+To understand this concept we will have to look over console logger where which type of query executed.
 
 RDBMS (MySQL) Script:
 ---------------------
