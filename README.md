@@ -1,0 +1,2 @@
+# HibernateInverseExample
+Using XML Mapping
