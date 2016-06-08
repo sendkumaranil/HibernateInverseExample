@@ -1,0 +1,24 @@
+<b>when inverse=false and inserting record in parent and child</b>
+-------------------------------------------------------------
+
+Hibernate: insert into stock (stock_code, stock_name) values (?, ?)
+Hibernate: insert into stock_daily_record (price_open, price_close, price_change, volume, date, stock_id) values (?, ?, ?, ?, ?, ?)
+Hibernate: update stock_daily_record set stock_id=? where stock_daily_record_id=?
+
+when inverse=false and updating parent table and inserting in child table
+--------------------------------------------------------------------------
+
+Hibernate: insert into stock_daily_record (price_open, price_close, price_change, volume, date, stock_id) values (?, ?, ?, ?, ?, ?)
+Hibernate: update stock_daily_record set stock_id=? where stock_daily_record_id=?
+
+
+when inverse=true and inserting record in parent and child
+------------------------------------------------------------
+Hibernate: insert into stock (stock_code, stock_name) values (?, ?)
+Hibernate: insert into stock_daily_record (price_open, price_close, price_change, volume, date) values (?, ?, ?, ?, ?)
+
+when inverse=false and updating parent table and inserting in child table
+--------------------------------------------------------------------------
+Hibernate: insert into stock_daily_record (price_open, price_close, price_change, volume, date, stock_id) values (?, ?, ?, ?, ?, ?)
+
+
