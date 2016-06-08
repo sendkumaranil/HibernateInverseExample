@@ -1,4 +1,4 @@
-<b>when inverse=false and inserting record in parent and child</b>
+when inverse=false and inserting record in parent and child
 -------------------------------------------------------------
 
 Hibernate: insert into stock (stock_code, stock_name) values (?, ?)
