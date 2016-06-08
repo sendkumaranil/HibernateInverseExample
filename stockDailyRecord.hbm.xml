@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hibernate.inverseexample.model.StockDailyRecord" table="stock_daily_record">
+		<id name="id" column="stock_daily_record_id">
+			<generator class="identity"/>
+		</id>
+		<property name="priceOpen" column="price_open" type="java.lang.String"/>
+		<property name="priceClose" column="price_close" type="java.lang.String"/>
+		<property name="priceChange" column="price_change" type="java.lang.String"/>
+		<property name="volume" column="volume"/>
+		<property name="date" column="date"/>
+		
+		<many-to-one name="stock" class="com.hibernate.inverseexample.model.Stock"  fetch="select">
+			<column name="stock_id" not-null="true"/>
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>
